@@ -1,65 +1,110 @@
+import { Heart, Mail, MapPin, Phone } from "lucide-react";
+
 export function Footer() {
   return (
-    <footer className="border-t border-border/50 bg-secondary/30">
-      <div className="container py-12">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-sm bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-serif text-lg">M</span>
+    <footer className="bg-foreground text-background">
+      <div className="container py-16">
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+                <Heart className="w-5 h-5 text-primary-foreground fill-current" />
               </div>
-              <span className="font-serif text-xl text-foreground">
-                Mur des fondateurs
+              <span className="font-heading font-bold text-xl">
+                Mur des Fondateurs
               </span>
             </div>
-            <p className="text-sm text-muted-foreground prose-institutional">
-              Un registre public et permanent pour honorer les premiers soutiens
-              des organisations à but non lucratif.
+            <p className="text-background/70 text-sm leading-relaxed">
+              Ensemble, célébrons les premiers pas de la générosité. 
+              Chaque don compte, chaque fondateur fait l'histoire.
             </p>
           </div>
 
           <div>
-            <h4 className="font-serif text-lg mb-4 text-foreground">Principes</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Égalité entre donateurs</li>
-              <li>Permanence de l'inscription</li>
-              <li>Respect de l'anonymat</li>
-              <li>Aucune exploitation commerciale</li>
+            <h4 className="font-heading font-semibold text-lg mb-4">Liens rapides</h4>
+            <ul className="space-y-3 text-sm text-background/70">
+              <li>
+                <a href="#impact" className="hover:text-primary transition-colors">
+                  Notre Impact
+                </a>
+              </li>
+              <li>
+                <a href="#concept" className="hover:text-primary transition-colors">
+                  Comment ça marche
+                </a>
+              </li>
+              <li>
+                <a href="#organisations" className="hover:text-primary transition-colors">
+                  Pour les ONG
+                </a>
+              </li>
+              <li>
+                <a href="#donateurs" className="hover:text-primary transition-colors">
+                  Pour les Donateurs
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-serif text-lg mb-4 text-foreground">Ressources</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <h4 className="font-heading font-semibold text-lg mb-4">Ressources</h4>
+            <ul className="space-y-3 text-sm text-background/70">
               <li>
-                <a href="#integration" className="hover:text-foreground transition-colors">
+                <a href="#" className="hover:text-primary transition-colors">
                   Guide d'intégration
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Documentation technique
+                <a href="#" className="hover:text-primary transition-colors">
+                  Documentation API
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
+                <a href="#" className="hover:text-primary transition-colors">
                   Questions fréquentes
                 </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-heading font-semibold text-lg mb-4">Contact</h4>
+            <ul className="space-y-3 text-sm text-background/70">
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-primary" />
+                <span>contact@murdesfondateurs.org</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-primary" />
+                <span>+32 2 123 45 67</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-primary mt-1" />
+                <span>Bruxelles, Belgique</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="section-divider"></div>
-
-        <div className="text-center">
-          <p className="text-xs text-muted-foreground">
-            Le Mur des fondateurs est un concept ouvert, libre d'utilisation par toute organisation
-            à but non lucratif.
-          </p>
-          <p className="text-xs text-muted-foreground/60 mt-2">
-            Aucune donnée personnelle n'est collectée par ce site de présentation.
-          </p>
+        <div className="border-t border-background/20 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-background/60">
+              © 2024 Mur des Fondateurs. Projet open source pour les ONG.
+            </p>
+            <div className="flex items-center gap-6 text-sm text-background/60">
+              <a href="#" className="hover:text-primary transition-colors">
+                Politique de confidentialité
+              </a>
+              <a href="#" className="hover:text-primary transition-colors">
+                Conditions d'utilisation
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
