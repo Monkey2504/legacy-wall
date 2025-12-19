@@ -2,91 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    /* Institutional color palette - dignified, timeless */
-    --background: 40 20% 97%;
-    --foreground: 220 25% 15%;
+    /* Humanitarian NGO palette - warm, hopeful, action-oriented */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 20%;
 
-    --card: 40 15% 95%;
-    --card-foreground: 220 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
 
-    --popover: 40 20% 97%;
-    --popover-foreground: 220 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 20%;
 
-    /* Deep slate blue - institutional, grave */
-    --primary: 220 30% 20%;
-    --primary-foreground: 40 20% 97%;
+    /* Vibrant red - action, urgency, humanitarian */
+    --primary: 0 85% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Warm cream - like aged parchment */
-    --secondary: 40 25% 92%;
-    --secondary-foreground: 220 25% 15%;
+    /* Warm light gray */
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 20% 20%;
 
-    --muted: 40 15% 90%;
+    --muted: 220 15% 94%;
     --muted-foreground: 220 15% 45%;
 
-    /* Bronze/gold accent - commemorative */
-    --accent: 35 50% 45%;
-    --accent-foreground: 40 20% 97%;
+    /* Warm orange accent */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 65% 45%;
-    --destructive-foreground: 40 20% 97%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 85%;
-    --input: 220 15% 85%;
-    --ring: 35 50% 45%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 0 85% 50%;
 
-    --radius: 0.25rem;
+    --radius: 0.75rem;
 
-    /* Custom tokens */
-    --bronze: 35 50% 45%;
-    --bronze-light: 35 45% 55%;
-    --bronze-dark: 35 55% 35%;
-    --slate-deep: 220 30% 20%;
-    --slate-medium: 220 25% 35%;
-    --parchment: 40 25% 95%;
-    --parchment-dark: 40 20% 90%;
+    /* Custom humanitarian tokens */
+    --humanitarian-red: 0 85% 50%;
+    --humanitarian-red-dark: 0 85% 40%;
+    --hope-orange: 25 95% 53%;
+    --trust-blue: 210 85% 45%;
+    --success-green: 145 70% 40%;
+    --warm-white: 40 30% 98%;
+    --hero-overlay: 220 20% 10%;
 
-    --sidebar-background: 220 30% 20%;
-    --sidebar-foreground: 40 20% 97%;
-    --sidebar-primary: 35 50% 45%;
-    --sidebar-primary-foreground: 40 20% 97%;
-    --sidebar-accent: 220 25% 30%;
-    --sidebar-accent-foreground: 40 20% 97%;
-    --sidebar-border: 220 25% 30%;
-    --sidebar-ring: 35 50% 45%;
+    --sidebar-background: 0 85% 50%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 85% 50%;
+    --sidebar-accent: 0 75% 45%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 75% 45%;
+    --sidebar-ring: 0 0% 100%;
   }
 
   .dark {
-    --background: 220 30% 10%;
-    --foreground: 40 15% 92%;
+    --background: 220 20% 10%;
+    --foreground: 0 0% 95%;
 
-    --card: 220 30% 12%;
-    --card-foreground: 40 15% 92%;
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 30% 12%;
-    --popover-foreground: 40 15% 92%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 40 15% 92%;
-    --primary-foreground: 220 30% 10%;
+    --primary: 0 80% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 25% 18%;
-    --secondary-foreground: 40 15% 92%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 25% 18%;
-    --muted-foreground: 40 10% 65%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 35 45% 50%;
-    --accent-foreground: 220 30% 10%;
+    --accent: 25 90% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 35%;
-    --destructive-foreground: 40 15% 92%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 220 25% 22%;
-    --input: 220 25% 22%;
-    --ring: 35 45% 50%;
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 0 80% 55%;
   }
 }
 
@@ -97,50 +97,77 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-family: 'Open Sans', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    @apply font-semibold tracking-tight;
+    font-family: 'Poppins', system-ui, sans-serif;
+    @apply font-bold tracking-tight;
   }
 }
 
 @layer components {
-  .institutional-heading {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    @apply text-foreground;
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--humanitarian-red-dark)) 100%);
+  }
+
+  .hero-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(var(--hope-orange) / 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--primary) / 0.2) 0%, transparent 50%);
   }
 
   .founder-slot {
-    @apply border border-border/60 bg-card/50 px-3 py-2 text-center transition-all duration-300;
-    @apply hover:border-accent/50 hover:bg-card;
+    @apply rounded-xl border-2 border-border bg-card px-4 py-3 text-center transition-all duration-300;
+    @apply hover:border-primary/50 hover:shadow-lg hover:-translate-y-1;
   }
 
   .founder-slot-filled {
-    @apply border-accent/30 bg-card;
+    @apply border-primary/20 bg-gradient-to-br from-card to-secondary shadow-md;
   }
 
   .founder-slot-empty {
-    @apply border-dashed border-border/40 bg-transparent;
+    @apply border-dashed border-border/50 bg-secondary/30;
   }
 
   .section-divider {
-    @apply w-24 h-px bg-accent/40 mx-auto my-8;
+    @apply w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto my-6;
   }
 
-  .prose-institutional {
-    @apply text-muted-foreground leading-relaxed;
-    max-width: 65ch;
+  .stat-card {
+    @apply bg-card rounded-2xl p-6 shadow-lg border border-border/50 text-center;
+    @apply hover:shadow-xl transition-shadow duration-300;
   }
 
-  .bronze-text {
-    color: hsl(var(--accent));
+  .feature-card {
+    @apply bg-card rounded-2xl p-8 shadow-lg border border-border/50;
+    @apply hover:shadow-xl hover:border-primary/30 transition-all duration-300;
   }
 
-  .commemorative-border {
-    border: 1px solid hsl(var(--accent) / 0.3);
-    box-shadow: inset 0 0 0 1px hsl(var(--accent) / 0.1);
+  .cta-button {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg;
+    @apply hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply hover:-translate-y-0.5;
+  }
+
+  .cta-button-secondary {
+    @apply bg-background text-foreground px-8 py-4 rounded-full font-semibold text-lg;
+    @apply border-2 border-primary hover:bg-primary hover:text-primary-foreground;
+    @apply transition-all duration-300;
+  }
+
+  .impact-number {
+    @apply text-5xl md:text-6xl font-bold text-primary;
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+    @apply bg-primary/10 text-primary;
+  }
+
+  .humanitarian-gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 }
 
@@ -153,10 +180,27 @@
     animation: fadeIn 0.6s ease-out forwards;
   }
 
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -164,9 +208,26 @@
     }
   }
 
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   .animate-fade-in-delayed {
     opacity: 0;
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeInUp 0.8s ease-out forwards;
     animation-delay: 0.2s;
+  }
+
+  .animate-fade-in-delayed-2 {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.4s;
   }
 }

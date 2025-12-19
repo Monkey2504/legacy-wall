@@ -9,13 +9,13 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1200px",
+        "2xl": "1280px",
       },
     },
     extend: {
       fontFamily: {
-        serif: ["'Cormorant Garamond'", "Georgia", "serif"],
-        sans: ["'Source Sans 3'", "system-ui", "sans-serif"],
+        sans: ["'Open Sans'", "system-ui", "sans-serif"],
+        heading: ["'Poppins'", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,18 +51,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        bronze: {
-          DEFAULT: "hsl(var(--bronze))",
-          light: "hsl(var(--bronze-light))",
-          dark: "hsl(var(--bronze-dark))",
+        humanitarian: {
+          red: "hsl(var(--humanitarian-red))",
+          "red-dark": "hsl(var(--humanitarian-red-dark))",
         },
-        slate: {
-          deep: "hsl(var(--slate-deep))",
-          medium: "hsl(var(--slate-medium))",
+        hope: {
+          orange: "hsl(var(--hope-orange))",
         },
-        parchment: {
-          DEFAULT: "hsl(var(--parchment))",
-          dark: "hsl(var(--parchment-dark))",
+        trust: {
+          blue: "hsl(var(--trust-blue))",
+        },
+        success: {
+          green: "hsl(var(--success-green))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -89,10 +89,15 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(30px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.8s ease-out forwards",
       },
     },
   },
